@@ -3,15 +3,15 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
-# Load dataset
+
 movies = pd.read_csv('movies.csv')
 
-# Process genres
+
 count = CountVectorizer(tokenizer=lambda x: x.split('|'))
 genre_matrix = count.fit_transform(movies['genres'])
 similarity = cosine_similarity(genre_matrix)
 
-# Recommendation function
+
 def recommend(title):
     try:
         idx = movies[movies['title'].str.contains(title, case=False, na=False)].index[0]
@@ -22,7 +22,7 @@ def recommend(title):
     except IndexError:
         return None
 
-# Streamlit UI
+
 st.title("🎬 Movie Recommendation App")
 st.write("Enter a movie name to get similar recommendations:")
 
