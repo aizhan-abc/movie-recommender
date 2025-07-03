@@ -4,7 +4,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
 
-movies = pd.read_csv('movies.csv')
+import os
+
+
+dataset_path = os.path.join(os.path.dirname(__file__), 'movies.csv')
+movies = pd.read_csv(dataset_path)
+
 
 
 count = CountVectorizer(tokenizer=lambda x: x.split('|'))
