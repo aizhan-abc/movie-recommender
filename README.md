@@ -10,12 +10,6 @@ The app was built as part of my learning journey in data science and web develop
 
 ---
 
-## 🚀 Live Demo
-Try the live app here:  
-👉 [Movie Recommendation App on Streamlit Cloud](https://movie-recommender-9nanp3tn8cve6csmarnzku.streamlit.app/)
-
----
-
 ## 📂 Project Features:
 - Recommends similar movies based on genre.
 - Uses `pandas` for data manipulation.
